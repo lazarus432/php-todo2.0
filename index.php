@@ -1,9 +1,18 @@
 <?php
 $connection = mysqli_connect('localhost', 'root', '', 'todo');
 
-$query = mysqli_query($connection, "SELECT * FROM tasks");
+if(isset($_POST['add-item'])) {
+    $task = $_POST['name'];
 
-while($results = mysqli_fetch_array($query)) {
+    $query = mysqli_query($connection, "INSERT INTO tasks(task) VALUES ('$task')");
+    if(mysqli_query($connection, $query)) {
+        echo "<h3>You have added an item to the database</h3>";
+    }
+}
+
+$query1 = mysqli_query($connection, "SELECT * FROM tasks");
+
+while($results = mysqli_fetch_array($query1)) {
     echo "\n" . $results['id'] . "\n" . $results['task'];
 }
 ?>
