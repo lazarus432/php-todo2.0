@@ -1,17 +1,16 @@
 body {
     background-color: lightgray;
-    width: 100%;
-    max-width: 600px;
     margin: 20px auto;
 }
 .container {
+    display: flex;
+    width: 100%;
+}
+.tasks {
     background-color: white;
     padding: 20px;
     border-radius: 2em;
     box-shadow: 2px 2px 2px lightslategray;
-}
-.tasks {
-    text-align: center;
 }
 ul {
     -webkit-padding-start: 0;
