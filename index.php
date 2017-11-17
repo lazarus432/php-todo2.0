@@ -19,6 +19,8 @@
                     </ul>
                 <?php  } ?>
             </div>
+        </div>
+        <div class="form">
             <form action="index.php" method="POST">
                 <input align: "center" type="text" name="name">
                 <br>
