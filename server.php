@@ -20,7 +20,7 @@ if(isset($_POST['add-item'])) {
 }
 
 //delete task
-if (isset($_GET['del'])) {
+if(isset($_GET['del'])) {
     $id = $_GET['del'];
     mysqli_query($connection, "DELETE FROM tasks WHERE id=$id");
     header('location: index.php'); //redirect to index page after query
