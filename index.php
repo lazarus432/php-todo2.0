@@ -11,13 +11,14 @@
                 <h1 align="center">Tasks</h1>
             </div>
             <div class="tasks">
-                <?php while ($row = mysqli_fetch_array($results)) { ?>
+                <?php $id = 1; while ($row = mysqli_fetch_array($results)) { ?>
                     <ul>
+                        <li><?php echo $id; ?></li>
                         <li><?php echo $row['task']; ?></li>
                         <li><a href="#">Edit</a></li>
                         <li><a href="index.php?del=<?php echo $row['id']; ?>">Delete</a></li>
                     </ul>
-                <?php  } ?>
+                <?php $id++; } ?>
             </div>
             <form action="index.php" method="POST">
             <?php if(isset($error)) { ?>
