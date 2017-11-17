@@ -15,7 +15,7 @@
                     <ul>
                         <li><?php echo $row['task']; ?></li>
                         <li><a href="#">Edit</a></li>
-                        <li><a href="#">Delete</a></li>
+                        <li><a href="index.php?del=<?php echo $row['id']; ?>">Delete</a></li>
                     </ul>
                 <?php  } ?>
             </div>
