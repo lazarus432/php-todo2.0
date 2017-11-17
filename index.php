@@ -20,6 +20,9 @@
                 <?php  } ?>
             </div>
             <form action="index.php" method="POST">
+            <?php if(isset($error)) { ?>
+                <p><?php echo $error; ?></p>
+            <?php } ?>
                 <input align: "center" type="text" name="name">
                 <br>
                 <input type="submit" name="add-item" value="Add Item">
