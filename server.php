@@ -12,7 +12,7 @@ $connection = mysqli_connect('localhost', 'root', '', 'todo');
 if(isset($_POST['add-item'])) {
     $task = $_POST['name'];
     if(empty($task)){
-        $error = "You must enter a task.";
+        $error = "Warning! You must first enter a task.";
     } else {
         $query = mysqli_query($connection, "INSERT INTO tasks(task) VALUES ('$task')");
         header('location: index.php'); // redirect to index page after query
