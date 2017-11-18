@@ -1,47 +1,6 @@
-body {
-    margin: 0;
-    font: normal 16px Arial, Helvetica;
-}
-.container {
-    max-width: 400px;
-    margin: auto;
-}
 #particles-js {
-    background: firebrick;
+    background: lightslategray;
 }
-form {
-    width: 400px;
-    background: #fff;
-    opacity: 0.9;
-    padding: 2em;
-    border: #ccc 2px solid;
-    position: absolute;
-    top: 20%;
-}
-form input[type="text"] {
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px #ccc solid;
-}
-.button {
-    background: #e74c3c;
-    color: white;
-    float: right;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 10px;
-}
-.tasks {
-    background: #fff;
-    opacity: 0.9;
-    padding: 2em;
-    border: #ccc 2px solid;
-    position: absolute;
-    top: 25%;
-}
-ul {
-}
-li {
-    list-style-type: none;
-    display: inline-block;
+.table {
+    margin: 3em auto;
 }
