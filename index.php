@@ -9,24 +9,51 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     </head>
     <body>
-        <div id="particles-js">
-            <div class="container">
-                <form action="index.php" method="POST">
-                    <?php if(isset($error)) { ?>
-                        <p><?php echo $error; ?></p>
-                    <?php } ?>
-                        <input type="text" name="name">
-                        <button type="submit" class="button" name="add-item">Add Item</button>
-                        <br>
-                        <?php $id = 1; while ($row = mysqli_fetch_array($results)) { ?>
-                            <ul>
-                                <li><?php echo $id; ?></li>
-                                <li><?php echo $row['task']; ?></li>
-                                <li><a href="#">Edit</a></li>
-                                <li><a href="index.php?del=<?php echo $row['id']; ?>">Delete</a></li>
-                            </ul>
-                        <?php $id++; } ?>
-                </form>
+        <div class="container-fluid" style="margin:0; padding:0;">
+            <div id="particles-js">
+                <div class="container">
+                    <div class="card" style="position:absolute; padding:2em; width:100%;transform: translate(0%, 20%);">
+                        <div class="card-body">
+                            <h2 class="card-title" align="center" style="width:100%;">Task List</h2>
+                                <form class="form-inline" action="index.php" method="POST">
+                                    <?php if(isset($error)) { ?>
+                                        <div class="alert alert-warning" role="alert" style="width:100%;padding:1em;text-align:center;"><?php echo $error; ?></div>
+                                    <?php } ?>
+                                    <script>
+                                        window.setTimeout(function() {
+                                            $(".alert").fadeTo(500,0).slideUp(500, function(){
+                                                $(this).remove();
+                                            });
+                                        }, 1000);
+                                    </script>
+                                        <input class="form-control form-control-lg" style="width:100%;" type="text"  placeholder="Enter Task" name="name">
+                                        <button type="submit" class="btn btn-primary" style="margin-top: 15px;" name="add-item">Add Item</button>
+                                </form>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Priority</th>
+                                            <th>Task</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <?php $id = 1; while ($row = mysqli_fetch_array($results)) { ?>
+                                    <tbody>
+                                        <tr>
+                                            <td><?php echo $id; ?></td>
+                                            <td><a href="#"><img src="images/priority.png"></a></td>
+                                            <td><?php echo $row['task']; ?></td>
+                                            <td><a href="#"><img src="images/edit.png"></a></td>
+                                            <td><a href="index.php?del=<?php echo $row['id']; ?>"><img src="images/trash-bin.png"></a></td>
+                                        </tr>
+                                    </tbody>
+                                    <?php $id++; } ?>
+                                </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
