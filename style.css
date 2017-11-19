@@ -1,6 +1,20 @@
+.navbar {
+    height: 4.5em;
+}
 #particles-js {
-    background: lightslategray;
+    background: gray;
+    height: 150px;
+}
+.parallax--bg {
+    background-image: url(images/city1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 900px;
 }
 .table {
     margin: 3em auto;
+}
+.card-body {
+    margin: 1em auto;
 }
