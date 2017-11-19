@@ -15,7 +15,7 @@ if(isset($_POST['add-item'])) {
         $error = "Warning! You must first enter a task.";
     } else {
         $query = mysqli_query($connection, "INSERT INTO tasks(task) VALUES ('$task')");
-        header('location: index.php'); // redirect to index page after query
+        header('location: task-list.php'); // redirect to task-list page after query
     }
 }
 
@@ -23,7 +23,7 @@ if(isset($_POST['add-item'])) {
 if(isset($_GET['del'])) {
     $id = $_GET['del'];
     mysqli_query($connection, "DELETE FROM tasks WHERE id=$id");
-    header('location: index.php'); //redirect to index page after query
+    header('location: task-list.php'); //redirect to task-list page after query
 }
 
 //retrieve information
