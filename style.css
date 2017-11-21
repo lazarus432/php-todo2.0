@@ -1,71 +1,31 @@
 .navbar {
+    position: absolute;
+    top: 0;
     height: 4.5em;
 }
-#particles-js {
-    background: gray;
-    height: 150px;
-}
-.path {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 1000;
-    animation: dash 3s 0s forwards;
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-@keyframes dash {
-    from {
-        stroke-dashoffset: 1000;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-}
 .parallax--bg {
-    background-image: url(images/parallax.jpg);
-    background-size: cover;
+    background-image: url(images/astro.jpg);
+    background-position-x: center;
     background-repeat: no-repeat;
-    background-position: center;
-    height: 950px;
+    height: 600px;
     filter: contrast(125%);
 }
 .parallax--bg2 {
-    background-image: url(images/city3.jpg);
-    background-size: cover;
+    background-image: url(images/coffee.jpg);
+    background-position: center;
     background-repeat: no-repeat;
-    height: 750px;
+    height: 600px;
     filter: contrast(125%);
+}
+footer {
+    background-color: #292b2c!important;
+    margin-top: 20em;
+    height: 150px;
 }
 .table {
     margin: 3em auto;
 }
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgb(0, 0, 0);
-}
-.card:hover .overlay {
-    opacity: .7;
-}
-.project-text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-.card-body {
-    margin: 1em auto;
-}
-footer {
-    background-color: #292b2c!important;
+#particles-js {
+    background: gray;
+    height: 150px;
 }
