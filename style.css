@@ -22,6 +22,67 @@ footer {
     margin-top: 20em;
     height: 150px;
 }
+.social {
+    background-color: #292b2c!important;
+    padding: 20px;
+}
+svg {
+    max-height: 70px;
+    stroke: #FFF;
+    stroke-width: 15px;
+    fill: none;
+    margin: 0 auto;
+}
+#github {
+    stroke-dasharray: 300, 0, 3000;
+}
+#linkedin {
+    stroke-dasharray: 300, 0, 2900;
+}
+#email {
+    stroke-dasharray: 300, 0, 3000;
+}
+svg:hover #email {
+    animation: email .7s;
+}
+svg:hover #github {
+    animation: github .7s;
+}
+svg:hover #linkedin {
+    animation: linkedin .7s;
+}
+@keyframes email {
+    10% {
+        stroke-dasharray: 300,500,3000;
+    }
+    100% {
+        stroke-dasharray: 3300, 500, 300;
+    }
+}
+@keyframes github {
+    10% {
+        stroke-dasharray: 300,500,3000;
+    }
+    100% {
+        stroke-dasharray: 3300, 500, 300;
+    }
+}
+@keyframes linkedin {
+    10% {
+        stroke-dasharray: 0,500,2300;
+    }
+    100% {
+        stroke-dasharray: 2900, 500, 2900;
+    }
+}
+.title2 {
+    display: flex;
+    width: 50%;
+}
+.title3 {
+    display: flex;
+    width: 50%;
+}
 .table {
     margin: 3em auto;
 }
