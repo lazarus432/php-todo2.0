@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     </head>
-    <body style="background-color:#e9e9e9;">
+    <body style="background-color:#FFF;">
       <header class="parallax--bg">
       </header>
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" style="position:absolute; width:100%;">
@@ -58,7 +58,6 @@
           </div>
         </section>
         <section style=" position: absolute; width: 40%;">
-
         </section>
         <div class="container social" style="width:100%; margin:0; display:inline-block;">
           <div class="row">
@@ -113,23 +112,23 @@
           </div>
         </div>
         <section class="title2" style="text-align:center;width:100%;">
-          <div class="jumbotron jumbotron-fluid" style="background-color:white; margin-bottom:0;">
+          <div class="jumbotron jumbotron-fluid" style="display:flex;width:50%;background-color:white;margin-bottom:0;">
             <div class="container" style="width:100%;margin:0;">
               <h1 class="display-4">Personal Projects</h1>
               <hr class="my-2">
               <p class="lead"><br>
                 "The best way to learn is to teach."<br><b>-Frank Oppenheimer</b>
               </p>
-              <div id="carouselControls" class="carousel slide" data-ride="carousel" style="padding:20px;">
+              <div id="carouselControls" class="carousel slide" data-ride="carousel" style="position:absolute;bottom:-24em;left:0;">
                 <div class="carousel-inner" role="listbox">
                   <div class="carousel-item active">
-                    <img src="images/cali.jpg" style="text-align:center;" alt="First slide">
+                    <img src="images/cali.jpg" alt="First slide">
                   </div>
                   <div class="carousel-item">
-                    <img src="images/store.jpg" style="text-align:center;" alt="Second slide">
+                    <img src="images/store.jpg" alt="Second slide">
                   </div>
                   <div class="carousel-item">
-                    <img src="images/ggb.jpg" style="text-align:center;" alt="Third slide">
+                    <img src="images/ggb.jpg" alt="Third slide">
                   </div>
                 </div>
                   <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -141,22 +140,44 @@
                     <span class="sr-only">Next</span>
                   </a>
               </div>
+              </div>
             </div>
           </div>
-          <div class="jumbotron jumbotron-fluid" style="background-color:white; margin-bottom:0;">
-            <div class="container">
-              <h1 class="display-4">Technical Skills</h1>
-              <p class="lead"><br>
-              </p>
-            </div>
+          <div id="chartContainer" style="width:50%;">
         </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" 
             crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" 
             crossorigin="anonymous"></script>
-        <script src=https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script src="js/parallax.js"></script>
+        <script>
+          window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+	          animationEnabled: true,
+	          theme: "light2", // "light1", "light2", "dark1", "dark2"
+	          title:{
+              text: "Programming Languages"
+              },
+              axisY: {
+                title: "Skill Level"
+                },
+                data: [{
+                  type: "pie",  
+                  dataPoints: [      
+                    { y: 85, label: "HTML" },
+                    { y: 70,  label: "CSS" },
+			              { y: 55,  label: "JavaScript" },
+                    { y: 70,  label: "Python" },
+                    { y: 50,  label: "PHP" },
+                    { y: 40, label: "SQL" }
+                  ]
+                }]
+              });
+            chart.render();
+          }
+        </script>
         <script>
           $('#btn-1').click(function() {
             window.location.href = './task-list.php';
