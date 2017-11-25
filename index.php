@@ -112,14 +112,14 @@
           </div>
         </div>
         <section class="title2" style="text-align:center;width:100%;">
-          <div class="jumbotron jumbotron-fluid" style="display:flex;width:50%;background-color:white;margin-bottom:0;">
+          <div class="jumbotron jumbotron-fluid" style="display:flex;width:100%;background-color:white;margin-bottom:0;">
             <div class="container" style="width:100%;margin:0;">
               <h1 class="display-4">Personal Projects</h1>
               <hr class="my-2">
               <p class="lead"><br>
                 "The best way to learn is to teach."<br><b>-Frank Oppenheimer</b>
               </p>
-              <div id="carouselControls" class="carousel slide" data-ride="carousel" style="position:absolute;bottom:-24em;left:0;">
+              <div id="carouselControls" class="carousel slide" data-ride="carousel" style="position:absolute;left:0;">
                 <div class="carousel-inner" role="listbox">
                   <div class="carousel-item active">
                     <img src="images/cali.jpg" alt="First slide">
@@ -143,7 +143,7 @@
               </div>
             </div>
           </div>
-          <div id="chartContainer" style="width:50%;">
+          <div id="chartContainer" style="width:100%;">
         </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" 
@@ -156,7 +156,7 @@
           window.onload = function () {
             var chart = new CanvasJS.Chart("chartContainer", {
 	          animationEnabled: true,
-	          theme: "light2", // "light1", "light2", "dark1", "dark2"
+	          theme: "light2",
 	          title:{
               text: "Programming Languages"
               },
