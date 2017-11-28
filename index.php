@@ -119,30 +119,34 @@
               <p class="lead"><br>
                 "The best way to learn is to teach."<br><b>-Frank Oppenheimer</b>
               </p>
-              <div id="carouselControls" class="carousel slide" data-ride="carousel" style="position:absolute;left:0;">
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active">
-                    <img src="images/cali.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/store.jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/ggb.jpg" alt="Third slide">
-                  </div>
-                </div>
-                  <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-              </div>
-              </div>
             </div>
           </div>
+        </section>
+        <div class="carousel container" style="margin:10px auto;max-width:50em;margin-bottom:5em;">
+          <div id="carouselControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img src="images/cali.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img src="images/store.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img src="images/ggb.jpg" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          </div>
+        </div>
+        </div>
+        <section class="pie-chart">
           <div id="chartContainer" style="width:100%;">
         </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
